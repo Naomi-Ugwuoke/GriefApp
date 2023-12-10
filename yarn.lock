@@ -645,7 +645,7 @@
 
 "@react-three/rapier@^1.2.0":
   version "1.2.0"
-  resolved "https://registry.npmjs.org/@react-three/rapier/-/rapier-1.2.0.tgz"
+  resolved "https://registry.yarnpkg.com/@react-three/rapier/-/rapier-1.2.0.tgz#31ea22a36953063e50ab23f91dfcafe25370cb05"
   integrity sha512-NlUgCf8xQpLIKjTkM0+EWUmNKVn1w1rFuPdbUKR3W2qvTZmJr36tAaoI5f2tPHoD81YleulcXjd/u8OeKTSz1Q==
   dependencies:
     "@dimforge/rapier3d-compat" "0.11.2"
@@ -2697,21 +2697,9 @@ three-stdlib@2.23.9:
     potpack "^1.0.1"
     zstddec "^0.0.2"
 
-three-stdlib@^2.28.0:
+three-stdlib@^2.28.0, three-stdlib@^2.28.7:
   version "2.28.7"
   resolved "https://registry.npmjs.org/three-stdlib/-/three-stdlib-2.28.7.tgz"
-  integrity sha512-E7NuztilCswBKnEoyqydvA7N4dy0cf/gLA0bKrrg6+Q6j4WtusGa/+t9oK2HVq47S1AHRH2CvFHpdIGNjPKo/A==
-  dependencies:
-    "@types/draco3d" "^1.4.0"
-    "@types/offscreencanvas" "^2019.6.4"
-    "@types/webxr" "^0.5.2"
-    draco3d "^1.4.1"
-    fflate "^0.6.9"
-    potpack "^1.0.1"
-
-three-stdlib@^2.28.7:
-  version "2.28.7"
-  resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.28.7.tgz#677ad2ce4d57375f7582e5fd62eadfd07ef6059a"
   integrity sha512-E7NuztilCswBKnEoyqydvA7N4dy0cf/gLA0bKrrg6+Q6j4WtusGa/+t9oK2HVq47S1AHRH2CvFHpdIGNjPKo/A==
   dependencies:
     "@types/draco3d" "^1.4.0"
@@ -2806,6 +2794,11 @@ typed-array-length@^1.0.4:
     call-bind "^1.0.2"
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
+
+typescript@^5.3.3:
+  version "5.3.3"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-5.3.3.tgz"
+  integrity sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
