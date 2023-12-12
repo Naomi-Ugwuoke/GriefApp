@@ -4,11 +4,12 @@ import {
   OrbitControls,
   Cylinder,
   MeshReflectorMaterial,
+  Box,
 } from "@react-three/drei";
 import { RigidBody, CylinderCollider } from "@react-three/rapier";
-import { Volcano } from "./Volcano";
 import { CharacterController } from "./CharacterController";
-import Character from "./Character";
+import { VolcanoController } from "./VolcanoController";
+import { CoinController } from "./CoinController";
 
 const Experience = () => {
   return (
@@ -32,10 +33,13 @@ const Experience = () => {
       <ContactShadows blur={2} />
 
       {/* Background, floor */}
-      <mesh position={[0, -0.5, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <planeGeometry args={[50, 50]} />
-        <meshStandardMaterial color="green" />
-      </mesh>
+
+      <RigidBody type="static">
+        <mesh position={[0, -0.5, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+          <planeGeometry args={[50, 50]} />
+          <meshStandardMaterial color="green" />
+        </mesh>
+      </RigidBody>
 
       <group position-y={0}>
         {/* Stage */}
@@ -51,18 +55,15 @@ const Experience = () => {
           </Cylinder>
         </RigidBody>
       </group>
-      {/* Allows the character to move when you click on a location on the screen */}
-      {/* movable area: */}
-      {/* <mesh rotation-x={-Math.PI / 2} position-y={-0.001}>
-        <planeGeometry args={[10, 10]} />
-        <meshStandardMaterial color="#ab6868" />
-      </mesh> */}
 
       {/* Volcano */}
-      <Volcano scale={[1, 1, 1]} position={[0, 0.01, -3.5]} />
+      <VolcanoController />
 
       {/* Character */}
       <CharacterController />
+
+      {/* Happy Face coin Place holder */}
+      <CoinController />
     </>
   );
 };

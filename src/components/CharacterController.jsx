@@ -27,6 +27,11 @@ export const CharacterController = () => {
   useFrame(() => {
     const impulse = { x: 0, y: 0, z: 0 };
 
+    // if rigidbody is null
+    if (!rigidbody.current) {
+      return; // Exit early if rigidbody.current is null
+    }
+
     //speed of movement:
     const linvel = rigidbody.current.linvel();
     let changeRotation = false;
